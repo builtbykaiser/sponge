@@ -1,0 +1,20 @@
+div data-controller="flash-card"
+  .w-full.shadow-lg.rounded-lg.overflow-hidden.mb-5
+    .p-12.bg-white.rounded-t-lg
+      = @front
+    .px-12.py-8.rounded-b-lg.bg-gradient-to-r.from-gray-200.to-gray-300
+      button.flex.items-center.justify-center.w-full.h-24.border-dashed.border-8.border-gray-400.text-gray-400.font-bold.text-4xl.transition.duration-500.ease-in-out.hover:border-gray-500.hover:text-gray-500.hover:bg-gray-300.focus:border-gray-500.focus:text-gray-500.focus:bg-gray-300.focus:outline-none type="button" data-target="flash-card.revealButton" data-action="flash-card#reveal"
+        | REVEAL
+
+      .transition-all.duration-500.ease-in-out data-target="flash-card.answer" style="min-height: 6rem; display: none"
+        = @back
+
+  .text-center
+    .relative.z-0.inline-flex.shadow-sm.rounded-md
+      button.relative.inline-flex.items-center.px-4.py-2.rounded-l-md.border.border-gray-300.bg-white.text-sm.leading-5.font-medium.text-gray-700.opacity-50.cursor-not-allowed.hover:text-gray-500.focus:z-10.focus:outline-none.focus:border-blue-300.focus:shadow-outline-blue.active:bg-gray-100.active:text-gray-700.transition.ease-in-out.duration-300 type="button" data-target="flash-card.feedbackButton"
+        i.fas.fa-times.mr-2
+        | Didn't Remember
+
+      button.-ml-px.relative.inline-flex.items-center.px-4.py-2.rounded-r-md.border.border-gray-300.bg-white.text-sm.leading-5.font-medium.text-gray-700.opacity-50.cursor-not-allowed.hover:text-gray-500.focus:z-10.focus:outline-none.focus:border-blue-300.focus:shadow-outline-blue.active:bg-gray-100.active:text-gray-700.transition.ease-in-out.duration-300 type="button" data-target="flash-card.feedbackButton"
+        | Remembered
+        i.fas.fa-check.ml-2

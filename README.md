@@ -7,7 +7,7 @@
 1. Ensure you have the npm configs set globally for Font Awesome Pro, or that you have a `.npmrc` file with your Font Awesome Pro auth token ([more info](https://fontawesome.com/how-to-use/on-the-web/setup/using-package-managers#installing-pro))
 1. Run `bundle install`
 1. Run `yarn install`
-1. Rename `.env.sample` to `.env` (`mv .env.sample .env`)
+1. Copy `.env.sample` to `.env` (`cp .env.sample .env`)
 
 ## Running the App
 1. Run `docker-compose up -d` (`dcup` if you have the aliases below) to spin up Postgres & Redis
